@@ -1,0 +1,14 @@
+checkSourceChanges
+doBuild
+	run.01.Build.PVCore.Linux.Compile
+		doCleanLinuxCore
+		doCoreJavaCompile
+	run.02.Build.PVCore.Windows.Compile
+		doCleanWindowsCore
+		doCompileSCVMM
+	run 03.Build.PVCore.Linux.Package
+		doCreateCorePackageLinux
+doTest
+	$[/myJob/TESTINTEGRATION]
+
+		
